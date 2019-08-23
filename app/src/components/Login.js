@@ -46,7 +46,7 @@ const FormikOnboardingForm = withFormik({
 
   handleSubmit(values, { setStatus, resetForm }) {
     axios
-      .post('http://localhost:5000/api/login', values)
+      .post('https://peaceful-escarpment-32643.herokuapp.com/api/login', values)
       .then(res => {
         setStatus(res.data);
         localStorage.setItem('token', res.data.payload);

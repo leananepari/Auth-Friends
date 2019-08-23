@@ -13,7 +13,7 @@ const FriendsList = (props) => {
 
   const getData = () => {
     axiosWithAuth()
-      .get('http://localhost:5000/api/friends')
+      .get('https://peaceful-escarpment-32643.herokuapp.com/api/friends')
       .then(res => {
         setFriendsList(res.data)
       })
@@ -22,7 +22,7 @@ const FriendsList = (props) => {
 
   const deleteFriend = (id) => {
     axiosWithAuth()
-      .delete(`http://localhost:5000/api/friends/${id}`)
+      .delete(`https://peaceful-escarpment-32643.herokuapp.com/api/friends/${id}`)
       .then(res => {
         setUpdate(!update)
       })
@@ -31,7 +31,7 @@ const FriendsList = (props) => {
 
   const editFriend = (id, values) => {
     axiosWithAuth()
-      .put(`http://localhost:5000/api/friends/${id}`, values)
+      .put(`https://peaceful-escarpment-32643.herokuapp.com/api/friends/${id}`, values)
       .then(res => {
         setUpdate(!update)
       })
